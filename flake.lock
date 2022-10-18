@@ -1,6 +1,35 @@
 {
   "nodes": {
+    "jetbrains-toolbox": {
+      "inputs": {
+        "nixpkgs": "nixpkgs"
+      },
+      "locked": {
+        "lastModified": 1,
+        "narHash": "sha256-jRoUr0E0FkmFkfNzfxyTuBBFG7hSm+YiI5z/PhFisus=",
+        "path": "/nix/store/fqnknprhpabzpm1wlld1viqa19p8fvbd-source/jetbrains-toolbox",
+        "type": "path"
+      },
+      "original": {
+        "path": "/nix/store/fqnknprhpabzpm1wlld1viqa19p8fvbd-source/jetbrains-toolbox",
+        "type": "path"
+      }
+    },
     "nixpkgs": {
+      "locked": {
+        "lastModified": 1666096911,
+        "narHash": "sha256-c/pv4MiFiPFfMPgiWN5qc9ADYcTkPlMCE4SYZBedB0Q=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "5c77b29073f0d679aee8056da3ced1cfb3d3aecb",
+        "type": "github"
+      },
+      "original": {
+        "id": "nixpkgs",
+        "type": "indirect"
+      }
+    },
+    "nixpkgs_2": {
       "locked": {
         "lastModified": 1666056570,
         "narHash": "sha256-e7EkIY68Tp7NKyp9JSHh6CgPPdsKYYWxiL4wZQN8Cwg=",
@@ -18,7 +47,8 @@
     },
     "root": {
       "inputs": {
-        "nixpkgs": "nixpkgs"
+        "jetbrains-toolbox": "jetbrains-toolbox",
+        "nixpkgs": "nixpkgs_2"
       }
     }
   },

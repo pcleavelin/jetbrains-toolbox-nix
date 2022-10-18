@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 let
   _1pass_config = {
@@ -131,6 +131,7 @@ in
       sublime-merge
       postman
       dbeaver
+      inputs.jetbrains-toolbox.packages.x86_64-linux.default
     ];
   };
 
