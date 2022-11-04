@@ -43,7 +43,7 @@
       in
       buildFHSUserEnv {
         name = "ultorg";
-        targetPkgs = pkgs: (with pkgs; [ freetype fontconfig jdk11 xorg.libX11 xorg.libXi xorg.libXext xorg.libXrender xorg.libXtst ] );
+        targetPkgs = pkgs: (with pkgs; [ freetype fontconfig xorg.libX11 xorg.libXi xorg.libXext xorg.libXrender xorg.libXtst ] );
         runScript = "${pkg.outPath}/bin/ultorg";
 
         extraInstallCommands = ''

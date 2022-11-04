@@ -6,12 +6,12 @@
       },
       "locked": {
         "lastModified": 1,
-        "narHash": "sha256-ZZvdzg+7/SOdo0NtxxV6TNGrwL1SmQ8rfzEHvcJo72I=",
-        "path": "/nix/store/h0hqf9l8qs117xqjbhfmaqr2vinga25n-source/jetbrains-toolbox",
+        "narHash": "sha256-Nn7Uhr96ze0mWlXIE0Z0SJyh5spgGot8GnYOnRv5Kkc=",
+        "path": "/nix/store/zlw32rdr1s53gapn23pwdcadjsk9y99j-source/jetbrains-toolbox",
         "type": "path"
       },
       "original": {
-        "path": "/nix/store/h0hqf9l8qs117xqjbhfmaqr2vinga25n-source/jetbrains-toolbox",
+        "path": "/nix/store/zlw32rdr1s53gapn23pwdcadjsk9y99j-source/jetbrains-toolbox",
         "type": "path"
       }
     },
@@ -72,12 +72,12 @@
       },
       "locked": {
         "lastModified": 1,
-        "narHash": "sha256-KQpb6H6Kams8Fil63Ht94kibPZMUt5CHNpJfCBRKfLo=",
-        "path": "/nix/store/h0hqf9l8qs117xqjbhfmaqr2vinga25n-source/ultorg",
+        "narHash": "sha256-ZhK16PGp3yfk/qvZrw+oYFfyU1yJv1afLomd2yDLXC4=",
+        "path": "/nix/store/zlw32rdr1s53gapn23pwdcadjsk9y99j-source/ultorg",
         "type": "path"
       },
       "original": {
-        "path": "/nix/store/h0hqf9l8qs117xqjbhfmaqr2vinga25n-source/ultorg",
+        "path": "/nix/store/zlw32rdr1s53gapn23pwdcadjsk9y99j-source/ultorg",
         "type": "path"
       }
     }
