@@ -21,6 +21,7 @@ in
 
   # Enable fingerprint reader
   services.fprintd.enable = true;
+  services.dbus.enable = true;
 
   # Disable mouse acceleration
   services.xserver.libinput = {
@@ -64,7 +65,7 @@ in
   # Enable the GNOME Desktop Environment.
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.displayManager.startx.enable = true;
-  services.xserver.displayManager.gdm.wayland = true;
+  services.xserver.displayManager.gdm.wayland = false;
   services.xserver.desktopManager.gnome.enable = true;
 
   fonts.fonts = with pkgs; [
@@ -132,17 +133,31 @@ in
       postman
       dbeaver
       inputs.jetbrains-toolbox.packages.x86_64-linux.default
+      inputs.ultorg.packages.x86_64-linux.default
     ];
   };
+
+  # Allow Wayland support for Slack (to make screen sharing work properly)
+  environment.sessionVariables.NIXOS_OZONE_WL = "1";
+  xdg.portal.wlr.enable = true;
+  # xdg.portal = {
+  #   enable = true;
+  #   extraPortals = with pkgs; [
+  #     xdg-desktop-portal-wlr
+  #     xdg-desktop-portal-gtk
+  #   ];
+  #   gtkUsePortal = true;
+  # };
 
   users.groups.onepassword.gid = _1pass_config.groupId;
 
   # Setup polkit users for 1Password
+  security.pam.services.gdm.enableGnomeKeyring = true;
   security.polkit.enable = true;
   programs._1password-gui = {
     enable = true;
     gid = _1pass_config.groupId;
-    package = (pkgs._1password-gui.override ({ polkitPolicyOwners = [ "patrick" ]; }));
+    # package = (pkgs._1password-gui.override ({ polkitPolicyOwners = [ "patrick" ]; }));
   };
 
   # Allow unfree packages

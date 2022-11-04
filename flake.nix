@@ -4,6 +4,7 @@
   inputs = {
     nixpkgs = { url = "github:nixos/nixpkgs/nixos-22.05"; };
     jetbrains-toolbox.url = "./jetbrains-toolbox";
+    ultorg.url = "./ultorg";
   };
 
   outputs = { self, nixpkgs, ... }@inputs: {
