@@ -1,9 +1,7 @@
 {
-  description = "A very basic flake";
+  description = "The Lapce Rust Code Editor";
 
   outputs = { self, nixpkgs }: {
-#https://github.com/lapce/lapce/releases/download/v0.2.1/Lapce-linux.tar.gz 
-
     packages.x86_64-linux.default = with import nixpkgs { system = "x86_64-linux"; };
     let
       desktopItem = makeDesktopItem {
