@@ -133,6 +133,7 @@ in
       postman
       dbeaver
       inputs.jetbrains-toolbox.packages.x86_64-linux.default
+      inputs.lapce.packages.x86_64-linux.default
       inputs.ultorg.packages.x86_64-linux.default
     ];
   };

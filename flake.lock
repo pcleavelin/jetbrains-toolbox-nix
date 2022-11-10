@@ -7,11 +7,26 @@
       "locked": {
         "lastModified": 1,
         "narHash": "sha256-Nn7Uhr96ze0mWlXIE0Z0SJyh5spgGot8GnYOnRv5Kkc=",
-        "path": "/nix/store/zlw32rdr1s53gapn23pwdcadjsk9y99j-source/jetbrains-toolbox",
+        "path": "/nix/store/54rks0fa6mg0pva3vm7wi6aby61jjs61-source/jetbrains-toolbox",
         "type": "path"
       },
       "original": {
-        "path": "/nix/store/zlw32rdr1s53gapn23pwdcadjsk9y99j-source/jetbrains-toolbox",
+        "path": "/nix/store/54rks0fa6mg0pva3vm7wi6aby61jjs61-source/jetbrains-toolbox",
+        "type": "path"
+      }
+    },
+    "lapce": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_2"
+      },
+      "locked": {
+        "lastModified": 1,
+        "narHash": "sha256-LxnatyWLsIerIDNmFQKR44LGygVOZLYsWlB6eBd0vKA=",
+        "path": "/nix/store/54rks0fa6mg0pva3vm7wi6aby61jjs61-source/lapce",
+        "type": "path"
+      },
+      "original": {
+        "path": "/nix/store/54rks0fa6mg0pva3vm7wi6aby61jjs61-source/lapce",
         "type": "path"
       }
     },
@@ -31,6 +46,20 @@
     },
     "nixpkgs_2": {
       "locked": {
+        "lastModified": 1668058645,
+        "narHash": "sha256-vHAXeYfKVO6ZbDN0GquEPVFZ42LzlYoX4ZWuKteFzj0=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "d01cb18be494e3d860fcfe6be4ad63614360333c",
+        "type": "github"
+      },
+      "original": {
+        "id": "nixpkgs",
+        "type": "indirect"
+      }
+    },
+    "nixpkgs_3": {
+      "locked": {
         "lastModified": 1666056570,
         "narHash": "sha256-e7EkIY68Tp7NKyp9JSHh6CgPPdsKYYWxiL4wZQN8Cwg=",
         "owner": "nixos",
@@ -45,7 +74,7 @@
         "type": "github"
       }
     },
-    "nixpkgs_3": {
+    "nixpkgs_4": {
       "locked": {
         "lastModified": 1667379994,
         "narHash": "sha256-PFOg8WHqfKXsIGZtEC0aB+rl8SB1cXvA01ytIudnRh8=",
@@ -62,22 +91,23 @@
     "root": {
       "inputs": {
         "jetbrains-toolbox": "jetbrains-toolbox",
-        "nixpkgs": "nixpkgs_2",
+        "lapce": "lapce",
+        "nixpkgs": "nixpkgs_3",
         "ultorg": "ultorg"
       }
     },
     "ultorg": {
       "inputs": {
-        "nixpkgs": "nixpkgs_3"
+        "nixpkgs": "nixpkgs_4"
       },
       "locked": {
         "lastModified": 1,
         "narHash": "sha256-ZhK16PGp3yfk/qvZrw+oYFfyU1yJv1afLomd2yDLXC4=",
-        "path": "/nix/store/zlw32rdr1s53gapn23pwdcadjsk9y99j-source/ultorg",
+        "path": "/nix/store/54rks0fa6mg0pva3vm7wi6aby61jjs61-source/ultorg",
         "type": "path"
       },
       "original": {
-        "path": "/nix/store/zlw32rdr1s53gapn23pwdcadjsk9y99j-source/ultorg",
+        "path": "/nix/store/54rks0fa6mg0pva3vm7wi6aby61jjs61-source/ultorg",
         "type": "path"
       }
     }
