@@ -132,6 +132,8 @@ in
       sublime-merge
       postman
       dbeaver
+      jetbrains.datagrip
+      jetbrains.clion
       inputs.jetbrains-toolbox.packages.x86_64-linux.default
       inputs.lapce.packages.x86_64-linux.default
       inputs.ultorg.packages.x86_64-linux.default
@@ -168,6 +170,7 @@ in
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     neovim
+    neovide
     ripgrep
     zoom-us
   ];
