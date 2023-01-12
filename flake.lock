@@ -7,11 +7,11 @@
       "locked": {
         "lastModified": 1,
         "narHash": "sha256-Nn7Uhr96ze0mWlXIE0Z0SJyh5spgGot8GnYOnRv5Kkc=",
-        "path": "/nix/store/5p64p8azfqf5p2h3d5kb76kp9dvbkpip-source/jetbrains-toolbox",
+        "path": "/nix/store/px7f23jikjl7xazi5p5g9z8rp5a3xnrb-source/jetbrains-toolbox",
         "type": "path"
       },
       "original": {
-        "path": "/nix/store/5p64p8azfqf5p2h3d5kb76kp9dvbkpip-source/jetbrains-toolbox",
+        "path": "/nix/store/px7f23jikjl7xazi5p5g9z8rp5a3xnrb-source/jetbrains-toolbox",
         "type": "path"
       }
     },
@@ -22,11 +22,11 @@
       "locked": {
         "lastModified": 1,
         "narHash": "sha256-t87RhnmYqRoOQlVbQR82fml2jkDZ3BvMFW1REpXqKnE=",
-        "path": "/nix/store/5p64p8azfqf5p2h3d5kb76kp9dvbkpip-source/lapce",
+        "path": "/nix/store/px7f23jikjl7xazi5p5g9z8rp5a3xnrb-source/lapce",
         "type": "path"
       },
       "original": {
-        "path": "/nix/store/5p64p8azfqf5p2h3d5kb76kp9dvbkpip-source/lapce",
+        "path": "/nix/store/px7f23jikjl7xazi5p5g9z8rp5a3xnrb-source/lapce",
         "type": "path"
       }
     },
@@ -60,11 +60,11 @@
     },
     "nixpkgs_3": {
       "locked": {
-        "lastModified": 1666056570,
-        "narHash": "sha256-e7EkIY68Tp7NKyp9JSHh6CgPPdsKYYWxiL4wZQN8Cwg=",
+        "lastModified": 1672580127,
+        "narHash": "sha256-3lW3xZslREhJogoOkjeZtlBtvFMyxHku7I/9IVehhT8=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "47edaa313fc3767ce3026037a5b62352f22f3602",
+        "rev": "0874168639713f547c05947c76124f78441ea46c",
         "type": "github"
       },
       "original": {
@@ -103,11 +103,11 @@
       "locked": {
         "lastModified": 1,
         "narHash": "sha256-ZhK16PGp3yfk/qvZrw+oYFfyU1yJv1afLomd2yDLXC4=",
-        "path": "/nix/store/5p64p8azfqf5p2h3d5kb76kp9dvbkpip-source/ultorg",
+        "path": "/nix/store/px7f23jikjl7xazi5p5g9z8rp5a3xnrb-source/ultorg",
         "type": "path"
       },
       "original": {
-        "path": "/nix/store/5p64p8azfqf5p2h3d5kb76kp9dvbkpip-source/ultorg",
+        "path": "/nix/store/px7f23jikjl7xazi5p5g9z8rp5a3xnrb-source/ultorg",
         "type": "path"
       }
     }

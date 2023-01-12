@@ -70,6 +70,8 @@ in
 
   fonts.fonts = with pkgs; [
     (nerdfonts.override { fonts = [ "FiraCode" ]; })
+    ipafont
+    kochi-substitute
   ];
 
   # Configure keymap in X11
@@ -98,6 +100,12 @@ in
     #media-session.enable = true;
   };
 
+  # Enable bluetooth
+  hardware.bluetooth = {
+    enable = true;
+    settings.General.Enable = "Source,Sink,Media,Socket";
+  };
+
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
@@ -113,6 +121,9 @@ in
     '';
   };
   services.pcscd.enable = true;
+
+  # Enable docker
+  virtualisation.docker.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.patrick = {
