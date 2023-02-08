@@ -23,6 +23,9 @@ in
   services.fprintd.enable = true;
   services.dbus.enable = true;
 
+  # Enable thunderbolt support
+  services.hardware.bolt.enable = true;
+
   # Disable mouse acceleration
   services.xserver.libinput = {
     enable = true;
@@ -54,6 +57,7 @@ in
   };
   hardware.opengl = {
     enable = true;
+    driSupport32Bit = true;
     extraPackages = with pkgs; [
       intel-media-driver
       vaapiIntel
@@ -133,6 +137,7 @@ in
     shell = pkgs.fish;
     packages = with pkgs; [
       alacritty
+      kitty
       brave
       slack
       yadm
@@ -144,12 +149,17 @@ in
       postman
       dbeaver
       jetbrains.datagrip
-      jetbrains.clion
-      inputs.jetbrains-toolbox.packages.x86_64-linux.default
-      inputs.lapce.packages.x86_64-linux.default
-      inputs.ultorg.packages.x86_64-linux.default
+      # jetbrains.clion
+      # inputs.jetbrains-toolbox.packages.x86_64-linux.default
+      # inputs.lapce.packages.x86_64-linux.default
+      # inputs.ultorg.packages.x86_64-linux.default
     ];
   };
+  users.users.nixosvmtest.isSystemUser = true;
+  users.users.nixosvmtest.initialPassword = "test";
+  users.users.nixosvmtest.group = "nixosvmtest";
+  users.groups.nixosvmtest = {};
+
 
   # Allow Wayland support for Slack (to make screen sharing work properly)
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
@@ -163,14 +173,14 @@ in
   #   gtkUsePortal = true;
   # };
 
-  users.groups.onepassword.gid = _1pass_config.groupId;
+  # users.groups.onepassword.gid = _1pass_config.groupId;
 
   # Setup polkit users for 1Password
   security.pam.services.gdm.enableGnomeKeyring = true;
   security.polkit.enable = true;
   programs._1password-gui = {
     enable = true;
-    gid = _1pass_config.groupId;
+    # gid = _1pass_config.groupId;
     # package = (pkgs._1password-gui.override ({ polkitPolicyOwners = [ "patrick" ]; }));
   };
 

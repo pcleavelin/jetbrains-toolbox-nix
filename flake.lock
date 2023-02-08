@@ -1,114 +1,61 @@
 {
   "nodes": {
-    "jetbrains-toolbox": {
-      "inputs": {
-        "nixpkgs": "nixpkgs"
-      },
+    "nixlib": {
       "locked": {
-        "lastModified": 1,
-        "narHash": "sha256-Nn7Uhr96ze0mWlXIE0Z0SJyh5spgGot8GnYOnRv5Kkc=",
-        "path": "/nix/store/q6zk8by0gvqhi8j7pz2c81zgm5hqi3z3-source/jetbrains-toolbox",
-        "type": "path"
+        "lastModified": 1636849918,
+        "narHash": "sha256-nzUK6dPcTmNVrgTAC1EOybSMsrcx+QrVPyqRdyKLkjA=",
+        "owner": "nix-community",
+        "repo": "nixpkgs.lib",
+        "rev": "28a5b0557f14124608db68d3ee1f77e9329e9dd5",
+        "type": "github"
       },
       "original": {
-        "path": "/nix/store/q6zk8by0gvqhi8j7pz2c81zgm5hqi3z3-source/jetbrains-toolbox",
-        "type": "path"
+        "owner": "nix-community",
+        "repo": "nixpkgs.lib",
+        "type": "github"
       }
     },
-    "lapce": {
+    "nixos-generators": {
       "inputs": {
-        "nixpkgs": "nixpkgs_2"
+        "nixlib": "nixlib",
+        "nixpkgs": [
+          "nixpkgs"
+        ]
       },
       "locked": {
-        "lastModified": 1,
-        "narHash": "sha256-t87RhnmYqRoOQlVbQR82fml2jkDZ3BvMFW1REpXqKnE=",
-        "path": "/nix/store/q6zk8by0gvqhi8j7pz2c81zgm5hqi3z3-source/lapce",
-        "type": "path"
+        "lastModified": 1674666581,
+        "narHash": "sha256-KNI2s/xrL7WOYaPJAWKBtb7cCH3335rLfsL+B+ssuGY=",
+        "owner": "nix-community",
+        "repo": "nixos-generators",
+        "rev": "6a5dc1d3d557ea7b5c19b15ff91955124d0400fa",
+        "type": "github"
       },
       "original": {
-        "path": "/nix/store/q6zk8by0gvqhi8j7pz2c81zgm5hqi3z3-source/lapce",
-        "type": "path"
+        "owner": "nix-community",
+        "repo": "nixos-generators",
+        "type": "github"
       }
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1666096911,
-        "narHash": "sha256-c/pv4MiFiPFfMPgiWN5qc9ADYcTkPlMCE4SYZBedB0Q=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "5c77b29073f0d679aee8056da3ced1cfb3d3aecb",
-        "type": "github"
-      },
-      "original": {
-        "id": "nixpkgs",
-        "type": "indirect"
-      }
-    },
-    "nixpkgs_2": {
-      "locked": {
-        "lastModified": 1668058645,
-        "narHash": "sha256-vHAXeYfKVO6ZbDN0GquEPVFZ42LzlYoX4ZWuKteFzj0=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "d01cb18be494e3d860fcfe6be4ad63614360333c",
-        "type": "github"
-      },
-      "original": {
-        "id": "nixpkgs",
-        "type": "indirect"
-      }
-    },
-    "nixpkgs_3": {
-      "locked": {
-        "lastModified": 1672580127,
-        "narHash": "sha256-3lW3xZslREhJogoOkjeZtlBtvFMyxHku7I/9IVehhT8=",
+        "lastModified": 1673450908,
+        "narHash": "sha256-b8em+kwrNtnB7gR8SyVf6WuTyQ+6tHS6dzt9D9wgKF0=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "0874168639713f547c05947c76124f78441ea46c",
+        "rev": "6c8644fc37b6e141cbfa6c7dc8d98846c4ff0c2e",
         "type": "github"
       },
       "original": {
         "owner": "nixos",
-        "ref": "nixos-22.05",
+        "ref": "nixos-unstable",
         "repo": "nixpkgs",
         "type": "github"
-      }
-    },
-    "nixpkgs_4": {
-      "locked": {
-        "lastModified": 1667379994,
-        "narHash": "sha256-PFOg8WHqfKXsIGZtEC0aB+rl8SB1cXvA01ytIudnRh8=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "a704b9029586266f63807f64a6718f1a65b0f83b",
-        "type": "github"
-      },
-      "original": {
-        "id": "nixpkgs",
-        "type": "indirect"
       }
     },
     "root": {
       "inputs": {
-        "jetbrains-toolbox": "jetbrains-toolbox",
-        "lapce": "lapce",
-        "nixpkgs": "nixpkgs_3",
-        "ultorg": "ultorg"
-      }
-    },
-    "ultorg": {
-      "inputs": {
-        "nixpkgs": "nixpkgs_4"
-      },
-      "locked": {
-        "lastModified": 1,
-        "narHash": "sha256-ZhK16PGp3yfk/qvZrw+oYFfyU1yJv1afLomd2yDLXC4=",
-        "path": "/nix/store/q6zk8by0gvqhi8j7pz2c81zgm5hqi3z3-source/ultorg",
-        "type": "path"
-      },
-      "original": {
-        "path": "/nix/store/q6zk8by0gvqhi8j7pz2c81zgm5hqi3z3-source/ultorg",
-        "type": "path"
+        "nixos-generators": "nixos-generators",
+        "nixpkgs": "nixpkgs"
       }
     }
   },
