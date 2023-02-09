@@ -145,7 +145,7 @@ in
       git
       deno
       bat
-      sublime-merge
+      sublime-merge-dev
       postman
       dbeaver
       jetbrains.datagrip
