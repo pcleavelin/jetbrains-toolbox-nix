@@ -22,6 +22,12 @@ in
   # Enable fingerprint reader
   services.fprintd.enable = true;
   services.dbus.enable = true;
+  services.dbus.packages = with pkgs; [ pass-secret-service ];
+
+  # Set udev rules for Corsair HS80
+  services.udev.extraRules = ''
+    KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{idVendor}=="1b1c", ATTRS{idProduct}=="0a6b", TAG+="uaccess"
+  '';
 
   # Enable thunderbolt support
   services.hardware.bolt.enable = true;
@@ -71,6 +77,7 @@ in
   services.xserver.displayManager.startx.enable = true;
   services.xserver.displayManager.gdm.wayland = false;
   services.xserver.desktopManager.gnome.enable = true;
+  services.gnome.gnome-keyring.enable = true;
 
   fonts.fonts = with pkgs; [
     (nerdfonts.override { fonts = [ "FiraCode" ]; })
@@ -133,7 +140,7 @@ in
   users.users.patrick = {
     isNormalUser = true;
     description = "Patrick Cleavelin";
-    extraGroups = [ "networkmanager" "wheel" "onepassword" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" "onepassword" ];
     shell = pkgs.fish;
     packages = with pkgs; [
       alacritty
@@ -149,6 +156,8 @@ in
       postman
       dbeaver
       jetbrains.datagrip
+      docker-credential-helpers
+      pass
       # jetbrains.clion
       # inputs.jetbrains-toolbox.packages.x86_64-linux.default
       # inputs.lapce.packages.x86_64-linux.default
@@ -193,6 +202,9 @@ in
     neovim
     neovide
     ripgrep
+    curl
+    unzip
+    fd
     zoom-us
   ];
 
@@ -207,10 +219,10 @@ in
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
+  services.openssh.enable = true;
 
   # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
+  networking.firewall.allowedTCPPorts = [ 8080 8100 ];
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
