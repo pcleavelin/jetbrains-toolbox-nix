@@ -18,6 +18,11 @@
       fsType = "ext4";
     };
 
+  fileSystems."/run/media/patrick/lap_data" =
+    { device = "/dev/disk/by-uuid/bf5201ef-d534-46e2-8892-6532e4d7e1fb";
+      fsType = "ext4";
+    };
+
   fileSystems."/boot/efi" =
     { device = "/dev/disk/by-uuid/551C-60E5";
       fsType = "vfat";

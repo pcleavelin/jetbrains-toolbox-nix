@@ -4,6 +4,11 @@ let
   _1pass_config = {
     groupId = 5000;
   };
+  screengrab = pkgs.writeScriptBin "screengrab" (
+    import ./screengrab.nix {
+      inherit (pkgs) imagemagick xclip;
+    }
+  );
 in
 {
   imports =
@@ -73,10 +78,23 @@ in
   };
 
   # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.displayManager.startx.enable = true;
-  services.xserver.displayManager.gdm.wayland = false;
-  services.xserver.desktopManager.gnome.enable = true;
+  services.xserver = {
+    displayManager = {
+      defaultSession = "none+i3";
+    };
+    desktopManager = {
+      xterm.enable = false;
+    };
+
+    windowManager.i3 = {
+      enable = true;
+      extraPackages = with pkgs; [
+        rofi
+        i3lock
+        i3blocks
+      ];
+    };
+  };
   services.gnome.gnome-keyring.enable = true;
 
   fonts.fonts = with pkgs; [
@@ -131,6 +149,7 @@ in
       set-option -ga terminal-overrides ",*256col*:Tc:RGB"
     '';
   };
+  programs.dconf.enable = true;
   services.pcscd.enable = true;
 
   # Enable docker
@@ -158,6 +177,7 @@ in
       jetbrains.datagrip
       docker-credential-helpers
       pass
+      remmina
       # jetbrains.clion
       # inputs.jetbrains-toolbox.packages.x86_64-linux.default
       # inputs.lapce.packages.x86_64-linux.default
@@ -197,7 +217,6 @@ in
   nixpkgs.config.allowUnfree = true;
 
   # List packages installed in system profile. To search, run:
-  # $ nix search wget
   environment.systemPackages = with pkgs; [
     neovim
     neovide
@@ -205,8 +224,14 @@ in
     curl
     unzip
     fd
+    htop
     zoom-us
+    networkmanagerapplet
+    dunst
+    picom
+    screengrab
   ];
+  environment.pathsToLink = [ "/libexec" ];
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
