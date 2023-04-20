@@ -166,6 +166,7 @@ in
       kitty
       brave
       slack
+      ripcord
       yadm
       xclip
       git
