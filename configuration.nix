@@ -91,7 +91,7 @@ in
       extraPackages = with pkgs; [
         rofi
         i3lock
-        i3blocks
+        polybar
       ];
     };
   };
@@ -231,6 +231,9 @@ in
     dunst
     picom
     screengrab
+    lxappearance
+    killall
+    pavucontrol
   ];
   environment.pathsToLink = [ "/libexec" ];
 
