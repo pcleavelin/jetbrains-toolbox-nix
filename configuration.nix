@@ -40,6 +40,7 @@ in
   # Disable mouse acceleration
   services.xserver.libinput = {
     enable = true;
+    touchpad.tapping = false;
 
     mouse.accelProfile = "flat";
   };
@@ -134,6 +135,7 @@ in
     enable = true;
     settings.General.Enable = "Source,Sink,Media,Socket";
   };
+  services.blueman.enable = true;
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
@@ -179,6 +181,7 @@ in
       docker-credential-helpers
       pass
       remmina
+      nitrogen
       # jetbrains.clion
       # inputs.jetbrains-toolbox.packages.x86_64-linux.default
       # inputs.lapce.packages.x86_64-linux.default
@@ -232,6 +235,7 @@ in
     picom
     screengrab
     lxappearance
+    xfce.thunar
     killall
     pavucontrol
   ];
